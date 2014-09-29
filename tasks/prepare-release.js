@@ -54,7 +54,8 @@ module.exports = function (grunt) {
     }
 
     // pushTo is forced to this setting so the release commit can be pushed back to git
-    options.bump.pushTo = 'github HEAD:master';
+    var releaseBranch = options.releaseBranch || 'master';
+    options.bump.pushTo = 'github HEAD:' + releaseBranch;
 
     grunt.log.debug('Note: No comitting, tagging or pushing in debug mode');
     grunt.log.debug(

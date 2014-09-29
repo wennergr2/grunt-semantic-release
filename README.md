@@ -72,6 +72,14 @@ The email used for git commits.
 Type: `Array<String>`
 *required*
 
+#### releaseBranch
+Type: `String`
+*optional*
+
+The branch which new releases are pushed to.
+
+Default value: `master`
+
 The name used for git commits.
 
 #### bump
